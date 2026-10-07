@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ravindra — Full Stack Developer</title>
+  <meta name="description" content="Malladi Ravindra Babu — Full Stack Developer (Python, Django, React) in Hyderabad. Projects, skills, education and contact." />
+  <meta name="theme-color" content="#FBF7E4" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <!-- TODO(user): set your final production URL for canonical + Open Graph (resume says ravindra-plum.vercel.app, GitHub says ravindra-sable.vercel.app) -->
+  <link rel="canonical" href="https://ravindra-sable.vercel.app/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ravindra — Full Stack Developer" />
+  <meta property="og:description" content="Python · Django · React · REST APIs. Projects, skills and contact." />
+  <meta property="og:image" content="https://ravindra-sable.vercel.app/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip" href="#about">Skip to content</a>
+
+  <!-- Loader -->
+  <div id="loader" role="status" aria-label="Loading">
+    <p class="label">Portfolio · 2026</p>
+    <p class="loader-name"><span id="loader-text"></span><span class="caret">|</span></p>
+    <p class="loader-count" id="loader-count">0</p>
+  </div>
+
+  <div id="progress" aria-hidden="true"></div>
+  <div id="cursor-dot" aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
+
+  <nav id="nav" aria-label="Primary" class="glass">
+    <span id="nav-pill" aria-hidden="true"></span>
+    <a href="#about">About</a><a href="#skills">Skills</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#achievements">Achievements</a><a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <!-- Hero -->
+    <section id="hero">
+      <div class="hero-bg" aria-hidden="true"><span class="outline-text">RAVINDRA</span></div>
+      <div class="chips" id="chips" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <p class="label" id="hero-label"></p>
+        <h1 data-morph>
+          <span class="mask"><span class="line">Full Stack</span></span>
+          <span class="mask"><span class="line">Develop<em>er.</em></span></span>
+        </h1>
+        <p class="hero-sub" id="hero-sub"></p>
+        <div class="btn-row">
+          <a href="#work" class="btn btn-primary magnetic">Explore work →</a>
+          <a href="#contact" class="btn btn-ghost magnetic">Let's talk</a>
+          <span data-resume data-style="ghost">Resume ↓</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="head"><p class="label">01 / About</p><h2 data-morph data-split>Hi, I'm <em>Ravindra.</em></h2></div>
+      <div class="grid2">
+        <div>
+          <p class="bio reveal" id="bio"></p>
+          <p class="quote" id="quote"></p>
+          <dl class="facts" id="facts"></dl>
+          <div class="btn-row">
+            <span data-resume data-style="primary">Résumé ↓</span>
+            <a id="gh-link" class="btn btn-ghost magnetic" target="_blank" rel="noreferrer">GitHub ↗</a>
+            <a id="li-link" class="btn btn-ghost magnetic" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+          </div>
+        </div>
+        <div class="lanyard" id="lanyard" role="img" aria-label="Developer ID card hanging from a lanyard. Drag it to swing.">
+          <div class="clip" aria-hidden="true"></div>
+          <div class="rope" id="rope">
+            <div class="strap" aria-hidden="true"></div>
+            <div class="hook" aria-hidden="true"></div>
+            <div class="card-wrap" id="card-wrap">
+              <div class="idcard" id="idcard">
+                <div class="idhead"><span>DEVELOPER ID</span><span id="id-year"></span></div>
+                <div class="idbody">
+                  <div class="photo" id="photo"><span class="mono" aria-hidden="true">RB</span></div>
+                  <p class="idname" id="id-name"></p>
+                  <p class="idrole" id="id-role"></p>
+                  <div class="idmeta"><span>ID<br><b id="id-id"></b></span><span>BASE<br><b>Hyderabad</b></span><span>YEAR<br><b id="id-year2"></b></span></div>
+                  <div class="barcode" id="barcode" aria-hidden="true"></div>
+                </div>
+                <span class="shine" aria-hidden="true"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <div class="head"><p class="label">02 / Skills</p><h2 data-morph data-split>The <em>periodic table</em> of my stack.</h2></div>
+      <div class="filters" id="filters" role="group" aria-label="Filter skills by family"></div>
+      <ul class="table" id="table"></ul>
+      <div id="tooltip" role="tooltip" hidden></div>
+    </section>
+
+    <!-- Work -->
+    <section id="work" class="section">
+      <div class="head"><p class="label">03 / Work</p><h2 data-morph data-split>Things I've <em>built.</em></h2></div>
+      <p class="label count-line"><span id="repo-count" data-count="0">0</span> projects on GitHub</p>
+      <div class="panels" id="panels" role="list"></div>
+      <h3 class="sub">More on <em>GitHub</em></h3>
+      <div class="repo-grid" id="repo-grid"></div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section">
+      <div class="head"><p class="label">04 / Education &amp; Experience</p><h2 data-morph data-split>Step by <em>step.</em></h2></div>
+      <div class="timeline" id="timeline">
+        <div class="tl-line" aria-hidden="true"></div><div class="tl-fill" id="tl-fill" aria-hidden="true"></div>
+        <ol id="tl-list"></ol>
+      </div>
+      <p class="label" style="margin-top:5rem">Certifications &amp; Training</p>
+      <ul class="training" id="training"></ul>
+    </section>
+
+    <!-- Achievements -->
+    <section id="achievements" class="section">
+      <div class="head"><p class="label">05 / Achievements</p><h2 data-morph data-split>Proof of <em>work.</em></h2></div>
+      <dl class="counters" id="counters"></dl>
+      <div class="ach-grid" id="ach"></div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="head"><p class="label">06 / Contact</p><h2 data-morph id="talk">Let's <em id="talk-em">talk.</em></h2></div>
+      <div class="grid2">
+        <form id="form" novalidate>
+          <input name="_gotcha" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true" />
+          <label><span class="label">Name</span><input name="name" required placeholder="Your name" /></label>
+          <label><span class="label">Email</span><input name="email" type="email" required placeholder="you@company.com" /></label>
+          <label><span class="label">Message</span><textarea name="message" rows="5" required placeholder="Tell me about the role or project…"></textarea></label>
+          <button class="btn btn-primary magnetic" id="send">Send message →</button>
+          <div id="form-status" role="status" aria-live="polite"></div>
+        </form>
+        <div>
+          <p class="label">Roles I'm looking for</p>
+          <ul class="tags" id="targets"></ul>
+          <div class="btn-row" id="socials"></div>
+        </div>
+      </div>
+
+      <footer>
+        <div>
+          <p class="label">All contact</p>
+          <ul class="contact-list" id="contact-list"></ul>
+        </div>
+        <div>
+          <p class="label" id="list-title"></p>
+          <ol class="proj-list" id="proj-list"></ol>
+        </div>
+        <div class="foot-bottom">
+          <p id="copy"></p>
+          <a href="#hero" class="btn btn-ghost" id="top">🚀 Back to top</a>
+        </div>
+      </footer>
+    </section>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
